@@ -1,5 +1,6 @@
 import 'package:dashboard_web/widgets/all_expenses.dart';
 import 'package:dashboard_web/widgets/custom_drawer.dart';
+import 'package:dashboard_web/widgets/quick_invoice.dart';
 import 'package:flutter/material.dart';
 
 class DashboardLayoutDesktop extends StatelessWidget {
@@ -20,6 +21,10 @@ class DashboardLayoutDesktop extends StatelessWidget {
           child: Column(
             children: const [
               AllExpenses(),
+              SizedBox(
+                height: 32,
+              ),
+              QuickInvoice(),
             ],
           ),
         )
