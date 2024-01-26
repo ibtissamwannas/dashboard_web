@@ -4,6 +4,8 @@ import 'package:dashboard_web/widgets/drawer_item.dart';
 import 'package:dashboard_web/widgets/user_info_list.dart';
 import 'package:flutter/material.dart';
 
+import '../models/user_info_model.dart';
+
 class CustomDrawer extends StatefulWidget {
   const CustomDrawer({
     super.key,
@@ -46,9 +48,11 @@ class _CustomDrawerState extends State<CustomDrawer> {
         slivers: [
           const SliverToBoxAdapter(
             child: UserInfoList(
-              image: Assets.assetsImagesFace,
-              title: 'Lekan Okeowo',
-              subTitle: 'ibtissamalwannnas@gmail.com',
+              userinfo: UserInfoModel(
+                image: Assets.assetsImagesAvatar,
+                subTitle: 'Madraniadi20@gmail.com',
+                title: 'Madrani Andi',
+              ),
             ),
           ),
           const SliverToBoxAdapter(

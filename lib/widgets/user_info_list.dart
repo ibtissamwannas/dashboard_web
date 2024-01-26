@@ -2,34 +2,34 @@ import 'package:dashboard_web/utils/app_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../models/user_info_model.dart';
+
 class UserInfoList extends StatelessWidget {
   const UserInfoList({
     super.key,
-    required this.image,
-    required this.title,
-    required this.subTitle,
+    required this.userinfo,
   });
 
-  final String title;
-  final String subTitle;
-  final String image;
+  final UserInfoModel userinfo;
 
   @override
   Widget build(BuildContext context) {
     return Card(
       color: const Color(0xFFFAFAFA),
       elevation: 0,
-      child: ListTile(
-        leading: SvgPicture.asset(
-          image,
-        ),
-        title: Text(
-          title,
-          style: AppStyles.styleSemiBold16,
-        ),
-        subtitle: Text(
-          subTitle,
-          style: AppStyles.styleRegular12,
+      child: Center(
+        child: ListTile(
+          leading: SvgPicture.asset(
+            userinfo.image,
+          ),
+          title: Text(
+            userinfo.title,
+            style: AppStyles.styleSemiBold16,
+          ),
+          subtitle: Text(
+            userinfo.subTitle,
+            style: AppStyles.styleRegular12,
+          ),
         ),
       ),
     );

@@ -18,14 +18,16 @@ class DashboardLayoutDesktop extends StatelessWidget {
         ),
         Expanded(
           flex: 3,
-          child: Column(
-            children: const [
-              AllExpenses(),
-              SizedBox(
-                height: 32,
-              ),
-              QuickInvoice(),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: const [
+                AllExpenses(),
+                SizedBox(
+                  height: 32,
+                ),
+                QuickInvoice(),
+              ],
+            ),
           ),
         )
       ],
