@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../models/user_info_model.dart';
 import '../utils/app_images.dart';
 import '../utils/app_style.dart';
+import 'custom_button.dart';
 import 'custom_text_field.dart';
 
 class QuickInvoice extends StatelessWidget {
@@ -186,7 +187,31 @@ class QuickInvoice extends StatelessWidget {
                     )
                   ],
                 ),
-              )
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 24,
+          ),
+          Row(
+            children: const [
+              Expanded(
+                child: CustomButton(
+                  text: "Add more details",
+                  backgroundColor: Colors.white,
+                  textColor: Color(
+                    0xFF4EB7F2,
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 15,
+              ),
+              Expanded(
+                child: CustomButton(
+                  text: "Send money",
+                ),
+              ),
             ],
           ),
         ],
