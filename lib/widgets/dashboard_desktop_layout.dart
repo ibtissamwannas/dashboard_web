@@ -1,4 +1,5 @@
 import 'package:dashboard_web/widgets/all_expenses.dart';
+import 'package:dashboard_web/widgets/custom_container.dart';
 import 'package:dashboard_web/widgets/custom_drawer.dart';
 import 'package:dashboard_web/widgets/quick_invoice.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,7 @@ class DashboardLayoutDesktop extends StatelessWidget {
           child: CustomDrawer(),
         ),
         const SizedBox(
-          width: 32,
+          width: 10,
         ),
         Expanded(
           flex: 2,
@@ -28,7 +29,7 @@ class DashboardLayoutDesktop extends StatelessWidget {
                 ),
                 AllExpenses(),
                 SizedBox(
-                  height: 32,
+                  height: 10,
                 ),
                 QuickInvoice(),
                 SizedBox(
@@ -39,23 +40,27 @@ class DashboardLayoutDesktop extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          width: 32,
+          width: 10,
         ),
         Expanded(
           child: Column(
-            children: const [
-              SizedBox(
+            children: [
+              const SizedBox(
                 height: 40,
               ),
-              CardPageView(),
-              SizedBox(
-                height: 40,
+              CustomeContainer(
+                padding: 20,
+                child: Column(
+                  children: const [
+                    CardPageView(),
+                    SizedBox(
+                      height: 40,
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
-        ),
-        const SizedBox(
-          width: 32,
         ),
       ],
     );
