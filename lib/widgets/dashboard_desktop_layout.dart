@@ -1,9 +1,12 @@
 import 'package:dashboard_web/widgets/all_expenses.dart';
 import 'package:dashboard_web/widgets/custom_container.dart';
 import 'package:dashboard_web/widgets/custom_drawer.dart';
+import 'package:dashboard_web/widgets/pie_chart.dart';
 import 'package:dashboard_web/widgets/quick_invoice.dart';
+import 'package:dashboard_web/widgets/rangle_option.dart';
 import 'package:flutter/material.dart';
 
+import '../utils/app_style.dart';
 import 'cards_page_view.dart';
 
 class DashboardLayoutDesktop extends StatelessWidget {
@@ -12,6 +15,7 @@ class DashboardLayoutDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Expanded(
           child: CustomDrawer(),
@@ -43,23 +47,174 @@ class DashboardLayoutDesktop extends StatelessWidget {
           width: 10,
         ),
         Expanded(
-          child: Column(
-            children: [
-              const SizedBox(
-                height: 40,
-              ),
-              CustomeContainer(
-                padding: 20,
-                child: Column(
-                  children: const [
-                    CardPageView(),
-                    SizedBox(
-                      height: 40,
-                    ),
-                  ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                const SizedBox(
+                  height: 40,
                 ),
-              ),
-            ],
+                CustomeContainer(
+                  padding: 20,
+                  child: Column(
+                    children: const [
+                      CardPageView(),
+                      SizedBox(
+                        height: 20,
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                CustomeContainer(
+                  padding: 20,
+                  child: Column(
+                    children: [
+                      Row(
+                        children: const [
+                          Text(
+                            "Income",
+                            style: AppStyles.styleSemiBold20,
+                          ),
+                          Expanded(
+                            child: SizedBox(),
+                          ),
+                          RangeOption()
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Container(
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            const Expanded(
+                              child: SizedBox(
+                                height: 200,
+                                child: PieChartS(),
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            Expanded(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Container(
+                                        height: 12,
+                                        width: 12,
+                                        decoration: const ShapeDecoration(
+                                          color: Color(0xFF208CC8),
+                                          shape: OvalBorder(),
+                                        ),
+                                      ),
+                                      const Text(
+                                        "Design",
+                                        style: AppStyles.styleRegular16,
+                                      ),
+                                      const Text(
+                                        "40%",
+                                        style: AppStyles.styleMedium16,
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Container(
+                                        height: 12,
+                                        width: 12,
+                                        decoration: const ShapeDecoration(
+                                          color: Color(0xFF4EB7F2),
+                                          shape: OvalBorder(),
+                                        ),
+                                      ),
+                                      const Text(
+                                        "Design",
+                                        style: AppStyles.styleRegular16,
+                                      ),
+                                      const Text(
+                                        "40%",
+                                        style: AppStyles.styleMedium16,
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Container(
+                                        height: 12,
+                                        width: 12,
+                                        decoration: const ShapeDecoration(
+                                          color: Color(0xFF064061),
+                                          shape: OvalBorder(),
+                                        ),
+                                      ),
+                                      const Text(
+                                        "Design",
+                                        style: AppStyles.styleRegular16,
+                                      ),
+                                      const Text(
+                                        "40%",
+                                        style: AppStyles.styleMedium16,
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Container(
+                                        height: 12,
+                                        width: 12,
+                                        decoration: const ShapeDecoration(
+                                          color: Color(0xFFE2DECD),
+                                          shape: OvalBorder(),
+                                        ),
+                                      ),
+                                      const Text(
+                                        "Design",
+                                        style: AppStyles.styleRegular16,
+                                      ),
+                                      const Text(
+                                        "40%",
+                                        style: AppStyles.styleMedium16,
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 40,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ],

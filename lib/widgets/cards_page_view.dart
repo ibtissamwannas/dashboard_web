@@ -87,15 +87,15 @@ class _CardPageViewState extends State<CardPageView> {
           ],
         ),
         const SizedBox(
-          height: 10,
+          height: 25,
         ),
         const RowTransactionHistory(),
         const SizedBox(
-          height: 25,
+          height: 16,
         ),
         const RowTransactionHistory2(),
         const SizedBox(
-          height: 25,
+          height: 16,
         ),
         const RowTransactionHistory3(),
       ],
