@@ -16,9 +16,6 @@ class MobileLayout extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          const SizedBox(
-            height: 40,
-          ),
           const AllExpenses(),
           const SizedBox(
             height: 10,
@@ -46,10 +43,10 @@ class MobileLayout extends StatelessWidget {
             child: Column(
               children: [
                 Row(
-                  children: const [
+                  children: [
                     Text(
                       "Income",
-                      style: AppStyles.styleSemiBold20,
+                      style: AppStyles.styleSemiBold20(context),
                     ),
                     Expanded(
                       child: SizedBox(),
@@ -88,13 +85,13 @@ class MobileLayout extends StatelessWidget {
                                   shape: OvalBorder(),
                                 ),
                               ),
-                              const Text(
+                          Text(
                                 "Design",
-                                style: AppStyles.styleRegular16,
+                                style: AppStyles.styleRegular16(context),
                               ),
-                              const Text(
+                         Text(
                                 "40%",
-                                style: AppStyles.styleMedium16,
+                                style: AppStyles.styleMedium16(context),
                               ),
                             ],
                           ),
@@ -112,13 +109,13 @@ class MobileLayout extends StatelessWidget {
                                   shape: OvalBorder(),
                                 ),
                               ),
-                              const Text(
+                         Text(
                                 "Design",
-                                style: AppStyles.styleRegular16,
+                                style: AppStyles.styleRegular16(context),
                               ),
-                              const Text(
+                         Text(
                                 "40%",
-                                style: AppStyles.styleMedium16,
+                                style: AppStyles.styleMedium16(context),
                               ),
                             ],
                           ),
@@ -136,13 +133,13 @@ class MobileLayout extends StatelessWidget {
                                   shape: OvalBorder(),
                                 ),
                               ),
-                              const Text(
+                         Text(
                                 "Design",
-                                style: AppStyles.styleRegular16,
+                                style: AppStyles.styleRegular16(context),
                               ),
-                              const Text(
+                          Text(
                                 "40%",
-                                style: AppStyles.styleMedium16,
+                                style: AppStyles.styleMedium16(context),
                               ),
                             ],
                           ),
@@ -160,13 +157,13 @@ class MobileLayout extends StatelessWidget {
                                   shape: OvalBorder(),
                                 ),
                               ),
-                              const Text(
+                            Text(
                                 "Design",
-                                style: AppStyles.styleRegular16,
+                                style: AppStyles.styleRegular16(context),
                               ),
-                              const Text(
+                             Text(
                                 "40%",
-                                style: AppStyles.styleMedium16,
+                                style: AppStyles.styleMedium16(context),
                               ),
                             ],
                           ),

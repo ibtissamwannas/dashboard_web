@@ -24,11 +24,11 @@ class UserInfoList extends StatelessWidget {
           ),
           title: Text(
             userinfo.title,
-            style: AppStyles.styleSemiBold16,
+            style: AppStyles.styleSemiBold16(context),
           ),
           subtitle: Text(
             userinfo.subTitle,
-            style: AppStyles.styleRegular12,
+            style: AppStyles.styleRegular12(context),
           ),
         ),
       ),

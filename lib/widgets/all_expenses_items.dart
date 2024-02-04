@@ -37,7 +37,7 @@ class AllExpansesItems extends StatelessWidget {
           ),
           Text(
             itemModel.title,
-            style: AppStyles.styleSemiBold16.copyWith(
+            style: AppStyles.styleSemiBold16(context).copyWith(
               color: isSelected ? Colors.white : Colors.black,
             ),
           ),
@@ -46,7 +46,7 @@ class AllExpansesItems extends StatelessWidget {
           ),
           Text(
             itemModel.date,
-            style: AppStyles.styleRegular14.copyWith(
+            style: AppStyles.styleRegular14(context).copyWith(
               color: isSelected
                   ? const Color(0xFFFAFAFA)
                   : const Color(0xFFAAAAAA),
@@ -57,7 +57,7 @@ class AllExpansesItems extends StatelessWidget {
           ),
           Text(
             itemModel.price,
-            style: AppStyles.styleRSemiBold24.copyWith(
+            style: AppStyles.styleRSemiBold24(context).copyWith(
               color: isSelected ? Colors.white : const Color(0xFF4EB7F2),
             ),
           )

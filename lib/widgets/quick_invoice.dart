@@ -35,9 +35,9 @@ class QuickInvoice extends StatelessWidget {
         children: [
           Row(
             children: [
-              const Text(
+            Text(
                 "Quick Invoice",
-                style: AppStyles.styleSemiBold20,
+                style: AppStyles.styleSemiBold20(context),
               ),
               const Expanded(
                 child: SizedBox(),
@@ -63,10 +63,10 @@ class QuickInvoice extends StatelessWidget {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
-            children: const [
+            children: [
               Text(
                 "Latest Transaction",
-                style: AppStyles.styleMedium16,
+                style: AppStyles.styleMedium16(context),
               ),
               SizedBox(
                 height: 16,
@@ -110,10 +110,10 @@ class QuickInvoice extends StatelessWidget {
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     Text(
                       'Customer name',
-                      style: AppStyles.styleMedium16,
+                      style: AppStyles.styleMedium16(context),
                     ),
                     SizedBox(
                       height: 12,
@@ -130,10 +130,10 @@ class QuickInvoice extends StatelessWidget {
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     Text(
                       'Customer Email',
-                      style: AppStyles.styleMedium16,
+                      style: AppStyles.styleMedium16(context),
                     ),
                     SizedBox(
                       height: 12,
@@ -154,10 +154,10 @@ class QuickInvoice extends StatelessWidget {
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children:[
                     Text(
                       'Item name',
-                      style: AppStyles.styleMedium16,
+                      style: AppStyles.styleMedium16(context),
                     ),
                     SizedBox(
                       height: 12,
@@ -174,10 +174,10 @@ class QuickInvoice extends StatelessWidget {
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children:  [
                     Text(
                       'Item mount',
-                      style: AppStyles.styleMedium16,
+                      style: AppStyles.styleMedium16(context),
                     ),
                     SizedBox(
                       height: 12,

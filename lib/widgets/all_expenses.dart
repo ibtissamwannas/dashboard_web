@@ -17,15 +17,15 @@ class AllExpenses extends StatelessWidget {
       child: Column(
         children: [
           Row(
-            children: const [
+            children: [
               Text(
                 "All Expenses",
-                style: AppStyles.styleSemiBold20,
+                style: AppStyles.styleSemiBold20(context),
               ),
-              Expanded(
+              const Expanded(
                 child: SizedBox(),
               ),
-              RangeOption()
+              const RangeOption()
             ],
           ),
           const SizedBox(

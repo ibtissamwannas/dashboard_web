@@ -57,10 +57,10 @@ class DashbardTabletLayout extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: const [
+                        children:  [
                           Text(
                             "Income",
-                            style: AppStyles.styleSemiBold20,
+                            style: AppStyles.styleSemiBold20(context),
                           ),
                           Expanded(
                             child: SizedBox(),
@@ -100,13 +100,13 @@ class DashbardTabletLayout extends StatelessWidget {
                                         shape: OvalBorder(),
                                       ),
                                     ),
-                                    const Text(
+                                  Text(
                                       "Design",
-                                      style: AppStyles.styleRegular16,
+                                      style: AppStyles.styleRegular16(context),
                                     ),
-                                    const Text(
+                                  Text(
                                       "40%",
-                                      style: AppStyles.styleMedium16,
+                                      style: AppStyles.styleMedium16(context),
                                     ),
                                   ],
                                 ),
@@ -125,13 +125,13 @@ class DashbardTabletLayout extends StatelessWidget {
                                         shape: OvalBorder(),
                                       ),
                                     ),
-                                    const Text(
+                                Text(
                                       "Design",
-                                      style: AppStyles.styleRegular16,
+                                      style: AppStyles.styleRegular16(context),
                                     ),
-                                    const Text(
+                                  Text(
                                       "40%",
-                                      style: AppStyles.styleMedium16,
+                                      style: AppStyles.styleMedium16(context),
                                     ),
                                   ],
                                 ),
@@ -150,13 +150,13 @@ class DashbardTabletLayout extends StatelessWidget {
                                         shape: OvalBorder(),
                                       ),
                                     ),
-                                    const Text(
+                                Text(
                                       "Design",
-                                      style: AppStyles.styleRegular16,
+                                      style: AppStyles.styleRegular16(context),
                                     ),
-                                    const Text(
+                                Text(
                                       "40%",
-                                      style: AppStyles.styleMedium16,
+                                      style: AppStyles.styleMedium16(context),
                                     ),
                                   ],
                                 ),
@@ -175,13 +175,13 @@ class DashbardTabletLayout extends StatelessWidget {
                                         shape: OvalBorder(),
                                       ),
                                     ),
-                                    const Text(
+                                  Text(
                                       "Design",
-                                      style: AppStyles.styleRegular16,
+                                      style: AppStyles.styleRegular16(context),
                                     ),
-                                    const Text(
+                                   Text(
                                       "40%",
-                                      style: AppStyles.styleMedium16,
+                                      style: AppStyles.styleMedium16(context),
                                     ),
                                   ],
                                 ),

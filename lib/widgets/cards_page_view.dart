@@ -33,11 +33,11 @@ class _CardPageViewState extends State<CardPageView> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(
+         SizedBox(
           width: 420,
           child: Text(
             "My Card",
-            style: AppStyles.styleSemiBold16,
+            style: AppStyles.styleSemiBold16(context),
           ),
         ),
         const SizedBox(
@@ -72,13 +72,13 @@ class _CardPageViewState extends State<CardPageView> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text(
+             Text(
               "Transaction History",
-              style: AppStyles.styleSemiBold20,
+              style: AppStyles.styleSemiBold20(context),
             ),
             Text(
               "see all",
-              style: AppStyles.styleMedium16.copyWith(
+              style: AppStyles.styleMedium16(context).copyWith(
                 color: const Color(
                   0xFF4EB7F2,
                 ),
@@ -116,9 +116,9 @@ class RowTransactionHistory2 extends StatelessWidget {
           ),
         ),
         child: ListTile(
-          title: const Text(
+          title:  Text(
             "Landing Page project",
-            style: AppStyles.styleSemiBold16,
+            style: AppStyles.styleSemiBold16(context),
           ),
           subtitle: Padding(
             padding: const EdgeInsets.only(
@@ -126,7 +126,7 @@ class RowTransactionHistory2 extends StatelessWidget {
             ),
             child: Text(
               "13 Apr, 2022",
-              style: AppStyles.styleRegular16.copyWith(
+              style: AppStyles.styleRegular16(context).copyWith(
                 color: const Color(
                   0xFFAAAAAA,
                 ),
@@ -135,7 +135,7 @@ class RowTransactionHistory2 extends StatelessWidget {
           ),
           trailing: Text(
             r"$20,129",
-            style: AppStyles.styleSemiBold20.copyWith(
+            style: AppStyles.styleSemiBold20(context).copyWith(
               color: const Color(0xFF7CD87A),
             ),
           ),
@@ -156,9 +156,9 @@ class RowTransactionHistory3 extends StatelessWidget {
           ),
         ),
         child: ListTile(
-          title: const Text(
+          title:  Text(
             "Juni Mobile App project",
-            style: AppStyles.styleSemiBold16,
+            style: AppStyles.styleSemiBold16(context),
           ),
           subtitle: Padding(
             padding: const EdgeInsets.only(
@@ -166,7 +166,7 @@ class RowTransactionHistory3 extends StatelessWidget {
             ),
             child: Text(
               "13 Apr, 2022 at 3:30 PM",
-              style: AppStyles.styleRegular16.copyWith(
+              style: AppStyles.styleRegular16(context).copyWith(
                 color: const Color(
                   0xFFAAAAAA,
                 ),
@@ -175,7 +175,7 @@ class RowTransactionHistory3 extends StatelessWidget {
           ),
           trailing: Text(
             r"$20,129",
-            style: AppStyles.styleSemiBold20.copyWith(
+            style: AppStyles.styleSemiBold20(context).copyWith(
               color: const Color(0xFF7CD87A),
             ),
           ),

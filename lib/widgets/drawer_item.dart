@@ -21,7 +21,7 @@ class DrawerItems extends StatelessWidget {
         ),
         title: Text(
           drawerItemModel.title,
-          style: isActive ? AppStyles.styleBold16 : AppStyles.styleMedium16,
+          style: isActive ? AppStyles.styleBold16(context) : AppStyles.styleMedium16(context),
         ),
         trailing: Container(
           width: 3.27,

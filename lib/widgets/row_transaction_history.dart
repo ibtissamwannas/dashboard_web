@@ -14,9 +14,9 @@ class RowTransactionHistory extends StatelessWidget {
           ),
         ),
         child: ListTile(
-          title: const Text(
+          title: Text(
             "Cash Withdrawal",
-            style: AppStyles.styleSemiBold16,
+            style: AppStyles.styleSemiBold16(context),
           ),
           subtitle: Padding(
             padding: const EdgeInsets.only(
@@ -24,7 +24,7 @@ class RowTransactionHistory extends StatelessWidget {
             ),
             child: Text(
               "13 Apr, 2022",
-              style: AppStyles.styleRegular16.copyWith(
+              style: AppStyles.styleRegular16(context).copyWith(
                 color: const Color(
                   0xFFAAAAAA,
                 ),
@@ -33,7 +33,7 @@ class RowTransactionHistory extends StatelessWidget {
           ),
           trailing: Text(
             r"$20,129",
-            style: AppStyles.styleSemiBold20
+            style: AppStyles.styleSemiBold20(context)
                 .copyWith(color: const Color(0xFFF3735E)),
           ),
         ));
