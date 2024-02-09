@@ -1,68 +1,63 @@
 class Assets {
   Assets._();
   
-  /// Assets for assetsImagesAvatar
-  /// assets/images/avatar.svg
-  static const String assetsImagesAvatar = "assets/images/avatar.svg";
+  /// Assets for imagesAvatar1
+  /// assets/images/avatar_1.svg
+  static const String imagesAvatar1 = "assets/images/avatar_1.svg";
 
-  /// Assets for assetsImagesAvatar2
+  /// Assets for imagesAvatar2
   /// assets/images/avatar_2.svg
-  static const String assetsImagesAvatar2 = "assets/images/avatar_2.svg";
+  static const String imagesAvatar2 = "assets/images/avatar_2.svg";
 
-  /// Assets for assetsImagesCardBackground
+  /// Assets for imagesAvatar3
+  /// assets/images/avatar_3.svg
+  static const String imagesAvatar3 = "assets/images/avatar_3.svg";
+
+  /// Assets for imagesBalance
+  /// assets/images/balance.svg
+  static const String imagesBalance = "assets/images/balance.svg";
+
+  /// Assets for imagesCardBackground
   /// assets/images/card_background.png
-  static const String assetsImagesCardBackground = "assets/images/card_background.png";
+  static const String imagesCardBackground = "assets/images/card_background.png";
 
-  /// Assets for assetsImagesCardReceive
-  /// assets/images/card-receive.svg
-  static const String assetsImagesCardReceive = "assets/images/card-receive.svg";
+  /// Assets for imagesDashboard
+  /// assets/images/dashboard.svg
+  static const String imagesDashboard = "assets/images/dashboard.svg";
 
-  /// Assets for assetsImagesCardSend
-  /// assets/images/card-send.svg
-  static const String assetsImagesCardSend = "assets/images/card-send.svg";
+  /// Assets for imagesExpenses
+  /// assets/images/expenses.svg
+  static const String imagesExpenses = "assets/images/expenses.svg";
 
-  /// Assets for assetsImagesCategory2
-  /// assets/images/category-2.svg
-  static const String assetsImagesCategory2 = "assets/images/category-2.svg";
-
-  /// Assets for assetsImagesChart2
-  /// assets/images/chart-2.svg
-  static const String assetsImagesChart2 = "assets/images/chart-2.svg";
-
-  /// Assets for assetsImagesConvertCard
-  /// assets/images/convert-card.svg
-  static const String assetsImagesConvertCard = "assets/images/convert-card.svg";
-
-  /// Assets for assetsImagesFace
-  /// assets/images/face.svg
-  static const String assetsImagesFace = "assets/images/face.svg";
-
-  /// Assets for assetsImagesGallery
+  /// Assets for imagesGallery
   /// assets/images/gallery.svg
-  static const String assetsImagesGallery = "assets/images/gallery.svg";
+  static const String imagesGallery = "assets/images/gallery.svg";
 
-  /// Assets for assetsImagesGraph
-  /// assets/images/graph.svg
-  static const String assetsImagesGraph = "assets/images/graph.svg";
+  /// Assets for imagesIncome
+  /// assets/images/income.svg
+  static const String imagesIncome = "assets/images/income.svg";
 
-  /// Assets for assetsImagesLogout
+  /// Assets for imagesLogout
   /// assets/images/logout.svg
-  static const String assetsImagesLogout = "assets/images/logout.svg";
+  static const String imagesLogout = "assets/images/logout.svg";
 
-  /// Assets for assetsImagesMaskGroup
-  /// assets/images/Mask_group.png
-  static const String assetsImagesMaskGroup = "assets/images/Mask_group.png";
+  /// Assets for imagesMyInvestments
+  /// assets/images/my_investments.svg
+  static const String imagesMyInvestments = "assets/images/my_investments.svg";
 
-  /// Assets for assetsImagesMoneys
-  /// assets/images/moneys.svg
-  static const String assetsImagesMoneys = "assets/images/moneys.svg";
+  /// Assets for imagesMyTransctions
+  /// assets/images/my_transctions.svg
+  static const String imagesMyTransctions = "assets/images/my_transctions.svg";
 
-  /// Assets for assetsImagesSetting2
-  /// assets/images/setting-2.svg
-  static const String assetsImagesSetting2 = "assets/images/setting-2.svg";
+  /// Assets for imagesSettings
+  /// assets/images/settings.svg
+  static const String imagesSettings = "assets/images/settings.svg";
 
-  /// Assets for assetsImagesWallet2
-  /// assets/images/wallet-2.svg
-  static const String assetsImagesWallet2 = "assets/images/wallet-2.svg";
+  /// Assets for imagesStatistics
+  /// assets/images/statistics.svg
+  static const String imagesStatistics = "assets/images/statistics.svg";
+
+  /// Assets for imagesWalletAccount
+  /// assets/images/wallet_account.svg
+  static const String imagesWalletAccount = "assets/images/wallet_account.svg";
 }
-

@@ -1,26 +1,18 @@
-import 'package:dashboard_web/widgets/custom_dot_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:dashboard_web/widgets/custom_dot.dart';
 
 class DotsIndicator extends StatelessWidget {
-  const DotsIndicator({
-    super.key,
-    required this.currentPage,
-  });
+  const DotsIndicator({super.key, required this.currentPageIndex});
 
-  final int currentPage;
-
+  final int currentPageIndex;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: List.generate(
         3,
         (index) => Padding(
-          padding: const EdgeInsets.only(
-            right: 8.0,
-          ),
-          child: CustomDotIndicator(
-            isActive: index == currentPage ? true : false,
-          ),
+          padding: const EdgeInsets.only(right: 6),
+          child: CustomDotIndicator(isActive: index == currentPageIndex),
         ),
       ),
     );

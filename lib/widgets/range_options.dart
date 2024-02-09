@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:dashboard_web/utils/app_styles.dart';
 
-import '../utils/app_style.dart';
-
-class RangeOption extends StatelessWidget {
-  const RangeOption({super.key});
+class RangeOptions extends StatelessWidget {
+  const RangeOptions({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -18,18 +19,20 @@ class RangeOption extends StatelessWidget {
       ),
       child: Row(
         children: [
-         Text(
+          Text(
             'Monthly',
             style: AppStyles.styleMedium16(context),
           ),
-          const SizedBox(width: 18),
+          const SizedBox(
+            width: 18,
+          ),
           Transform.rotate(
             angle: -1.57079633,
             child: const Icon(
               Icons.arrow_back_ios_new_outlined,
               color: Color(0xFF064061),
             ),
-          )
+          ),
         ],
       ),
     );

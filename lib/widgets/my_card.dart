@@ -1,7 +1,7 @@
-import 'package:dashboard_web/utils/app_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../utils/app_images.dart';
+import 'package:dashboard_web/utils/app_images.dart';
+import 'package:dashboard_web/utils/app_styles.dart';
 
 class MyCard extends StatelessWidget {
   const MyCard({super.key});
@@ -13,11 +13,7 @@ class MyCard extends StatelessWidget {
       child: Container(
         decoration: ShapeDecoration(
           image: const DecorationImage(
-            fit: BoxFit.fill,
-            image: AssetImage(
-              Assets.assetsImagesMaskGroup,
-            ),
-          ),
+              fit: BoxFit.fill, image: AssetImage(Assets.imagesCardBackground)),
           color: const Color(0xFF4EB7F2),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
@@ -27,51 +23,42 @@ class MyCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
-              contentPadding: const EdgeInsets.symmetric(
-                horizontal: 20,
-                vertical: 10,
-              ),
-              title: Text(
-                "Name card",
-                style: AppStyles.styleRegular16(context).copyWith(
-                  color: Colors.white,
-                ),
-              ),
+              contentPadding:
+                  const EdgeInsets.only(left: 31, right: 42, top: 16),
+              title: Text('Name card',
+                  style: AppStyles.styleRegular16(context).copyWith(
+                    color: Colors.white,
+                  )),
               subtitle: Text(
-                "Syah Bandi",
+                'Syah Bandi',
                 style: AppStyles.styleMedium20(context),
               ),
-              trailing: SvgPicture.asset(
-                Assets.assetsImagesGallery,
-              ),
+              trailing: SvgPicture.asset(Assets.imagesGallery),
             ),
-            const Expanded(
-              child: SizedBox(),
-            ),
+            const Expanded(child: SizedBox()),
             Padding(
-              padding: const EdgeInsets.only(right: 20),
-              child: Text(
-                '0918 8124 0042 8129',
-                textAlign: TextAlign.end,
-                style: AppStyles.styleRSemiBold24(context).copyWith(
-                  color: Colors.white,
-                ),
+              padding: const EdgeInsets.only(right: 48 - 24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text(
+                    '0918 8124 0042 8129',
+                    style: AppStyles.styleSemiBold24(context).copyWith(
+                      color: Colors.white,
+                    ),
+                  ),
+                  Text(
+                    '12/20 - 124',
+                    style: AppStyles.styleRegular16(context)
+                        .copyWith(color: Colors.white),
+                  ),
+                ],
               ),
             ),
-            const SizedBox(
-              height: 5,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 20),
-              child: Text(
-                '12/20 - 124',
-                style: AppStyles.styleRegular16(context).copyWith(
-                  color: Colors.white,
-                ),
+            const Flexible(
+              child: SizedBox(
+                height: 54 - 28,
               ),
-            ),
-            const SizedBox(
-              height: 20,
             ),
           ],
         ),

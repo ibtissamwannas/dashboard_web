@@ -1,47 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:dashboard_web/utils/app_styles.dart';
 
-import '../utils/app_style.dart';
-
-class CustomTextFormField extends StatelessWidget {
-  const CustomTextFormField({
-    super.key,
-    required this.text,
-  });
-  final String text;
+class CustomTextField extends StatelessWidget {
+  const CustomTextField({super.key, required this.hint});
+  final String hint;
   @override
   Widget build(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
-        filled: true,
-        hintText: text,
-        hintStyle: AppStyles.styleRegular16(context).copyWith(
-          color: const Color(0xFFAAAAAA),
-        ),
-        fillColor: const Color(0xFFFAFAFA),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(
-            12,
+          hintText: hint,
+          hintStyle: AppStyles.styleRegular16(context).copyWith(
+            color: const Color(0xFFAAAAAA),
           ),
-          borderSide: const BorderSide(
-            color: Color(0xFFFAFAFA),
-          ),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(
-            12,
-          ),
-          borderSide: const BorderSide(
-            color: Color(0xFFFAFAFA),
-          ),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(
-            12,
-          ),
-          borderSide: const BorderSide(
-            color: Color(0xFFFAFAFA),
-          ),
-        ),
+          fillColor: const Color(0xFFFAFAFA),
+          filled: true,
+          border: buildBorder(),
+          enabledBorder: buildBorder(),
+          focusedBorder: buildBorder()),
+    );
+  }
+
+  OutlineInputBorder buildBorder() {
+    return OutlineInputBorder(
+      borderRadius: BorderRadius.circular(12),
+      borderSide: const BorderSide(
+        color: Color(0xFFFAFAFA),
       ),
     );
   }

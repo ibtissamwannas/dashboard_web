@@ -1,59 +1,28 @@
-import 'package:dashboard_web/models/drawer_item_model.dart';
-import 'package:dashboard_web/utils/app_images.dart';
-import 'package:dashboard_web/widgets/drawer_item.dart';
-import 'package:dashboard_web/widgets/user_info_list.dart';
 import 'package:flutter/material.dart';
+import 'package:dashboard_web/models/drawer_item_model.dart';
+import 'package:dashboard_web/models/user_info_model.dart';
+import 'package:dashboard_web/utils/app_images.dart';
+import 'package:dashboard_web/widgets/active_and_inactive_item.dart';
+import 'package:dashboard_web/widgets/drawer_item.dart';
+import 'package:dashboard_web/widgets/drawer_items_list_view.dart';
+import 'package:dashboard_web/widgets/user_info_list_tile.dart';
 
-import '../models/user_info_model.dart';
+class CustomDrawer extends StatelessWidget {
+  const CustomDrawer({super.key});
 
-class CustomDrawer extends StatefulWidget {
-  const CustomDrawer({
-    super.key,
-  });
-
-  static const List<DrawerItemModel> items = [
-    DrawerItemModel(
-      title: "Dashboard",
-      image: Assets.assetsImagesCategory2,
-    ),
-    DrawerItemModel(
-      title: "My Transaction",
-      image: Assets.assetsImagesConvertCard,
-    ),
-    DrawerItemModel(
-      title: "Statistic",
-      image: Assets.assetsImagesGraph,
-    ),
-    DrawerItemModel(
-      title: "Wallet Account",
-      image: Assets.assetsImagesWallet2,
-    ),
-    DrawerItemModel(
-      title: "My Investments",
-      image: Assets.assetsImagesChart2,
-    )
-  ];
-
-  @override
-  State<CustomDrawer> createState() => _CustomDrawerState();
-}
-
-class _CustomDrawerState extends State<CustomDrawer> {
-  int activeIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width * .7,
-      color: Colors.white,
+      color: const Color.fromRGBO(255, 255, 255, 1),
       child: CustomScrollView(
         slivers: [
           const SliverToBoxAdapter(
-            child: UserInfoList(
-              userinfo: UserInfoModel(
-                image: Assets.assetsImagesAvatar,
-                subTitle: 'Madraniadi20@gmail.com',
-                title: 'Madrani Andi',
-              ),
+            child: UserInfoListTile(
+              userInfoModel: UserInfoModel(
+                  image: Assets.imagesAvatar3,
+                  title: 'Lekan Okeowo',
+                  subTitle: 'demo@gmail.com'),
             ),
           ),
           const SliverToBoxAdapter(
@@ -61,53 +30,26 @@ class _CustomDrawerState extends State<CustomDrawer> {
               height: 8,
             ),
           ),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (BuildContext context, int index) {
-                return GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      activeIndex = index;
-                    });
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 20),
-                    child: DrawerItems(
-                      drawerItemModel: CustomDrawer.items[index],
-                      isActive: activeIndex == index,
-                    ),
-                  ),
-                );
-              },
-              childCount: CustomDrawer.items.length,
-            ),
-          ),
+          const DrawerItemsListView(),
           SliverFillRemaining(
-            hasScrollBody: true,
+            hasScrollBody: false,
             child: Column(
               children: const [
                 Expanded(
-                  child: SizedBox(
-                    height: 20,
-                  ),
-                ),
-                DrawerItems(
+                    child: SizedBox(
+                  height: 20,
+                )),
+                InActiveDrawerItem(
                   drawerItemModel: DrawerItemModel(
-                    title: 'Setting system',
-                    image: Assets.assetsImagesSetting2,
-                  ),
-                  isActive: false,
+                      title: 'Setting system', image: Assets.imagesSettings),
                 ),
-                DrawerItems(
+                InActiveDrawerItem(
                   drawerItemModel: DrawerItemModel(
-                    title: 'Logout account',
-                    image: Assets.assetsImagesLogout,
-                  ),
-                  isActive: false,
+                      title: 'Logout account', image: Assets.imagesLogout),
                 ),
                 SizedBox(
                   height: 48,
-                ),
+                )
               ],
             ),
           )

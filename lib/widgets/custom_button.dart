@@ -1,36 +1,25 @@
-import 'package:dashboard_web/utils/app_style.dart';
 import 'package:flutter/material.dart';
+import 'package:dashboard_web/utils/app_styles.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({
-    super.key,
-    required this.text,
-    this.backgroundColor = const Color(
-      0xFF4EB7F2,
-    ),
-    this.textColor = Colors.white,
-  });
-  final String text;
-  final Color? backgroundColor;
-  final Color? textColor;
+  const CustomButton({super.key, this.backgourndColor, this.textColor});
 
+  final Color? backgourndColor, textColor;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 58,
+      height: 62,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(
-              12,
-            ),
+            borderRadius: BorderRadius.circular(12),
           ),
           elevation: 0,
-          backgroundColor: backgroundColor,
+          backgroundColor: backgourndColor ?? const Color(0xFF4DB7F2),
         ),
         onPressed: () {},
         child: Text(
-          text,
+          'Send Money',
           style: AppStyles.styleSemiBold18(context).copyWith(
             color: textColor,
           ),
