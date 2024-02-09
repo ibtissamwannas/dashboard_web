@@ -26,10 +26,14 @@ class _DashBoradViewState extends State<DashBoradView> {
               elevation: 0,
               backgroundColor: const Color(0xFFFAFAFA),
               leading: IconButton(
-                  onPressed: () {
-                    scaffoldKey.currentState!.openDrawer();
-                  },
-                  icon: const Icon(Icons.menu)),
+                onPressed: () {
+                  scaffoldKey.currentState!.openDrawer();
+                },
+                icon: const Icon(
+                  Icons.menu,
+                  color: Colors.black,
+                ),
+              ),
             )
           : null,
       backgroundColor: const Color(0xFFF7F9FA),
